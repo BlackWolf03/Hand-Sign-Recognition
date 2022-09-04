@@ -1,2 +1,2 @@
 # Hand-Sign-Recognition
-This model is based upon the American Sign Language and it uses computer vision technology to recognise hand signs and provides the output in the form of text.
+The hand sign language detction model has been made for the aid of people with hearing disabilities. As not many people are aware about the sign language,they find it difficuilt to communicate with other people. But, with the help of this application, people will be able to overcome this problem. This model is based upon the American Sign Language and it uses computer vision technology to recognise hand signs and provides the output in the form of text. The text can be easily read and understood by any common person, and would lower the communication between two classes of people.
