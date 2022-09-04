@@ -16,7 +16,7 @@ imgSize = 300
 folder = "Dataset/Ab"
 counter = 0
 
-labels = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","x","y","z"]
+labels = ["a","b","c"]
 
 while True:
     success, img = cap.read()
@@ -42,7 +42,7 @@ while True:
             wGap = math.ceil((imgSize - wCal)/2)
             imgWhite[:, wGap:wCal+wGap] = imgResize
             prediction, index = classifier.getPrediction(imgWhite,draw=False)
-        
+            
         else:
             k = imgSize/w
             hCal = math.ceil(k*h)
@@ -51,7 +51,7 @@ while True:
             hGap = math.ceil((imgSize - hCal)/2)
             imgWhite[hGap:hCal + hGap, :] = imgResize
             prediction, index = classifier.getPrediction(imgWhite,draw=False)
-        
+            
         
         cv2.putText(imgOutput, labels[index],(x,y-25),cv2.FONT_HERSHEY_COMPLEX,2,(255,0,255),2)
         cv2.rectangle(imgOutput,(x - offset,y - offset),(x+w+offset,y+h+offset),(255,0,255),4)
